@@ -2,8 +2,6 @@
 <html>
 <body>
 
-<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
-
 <button onclick="startIt();">Start It</button>
 <button onclick="stopIt();">Stop It</button>
 
@@ -12,7 +10,7 @@
 var timer;
 
 function startIt() {
-	timer = setInterval(myFunction, 3000);
+	timer = setInterval(myFunction, 900000);
 }
 
 function stopIt() {
@@ -20,8 +18,9 @@ function stopIt() {
 }
 
 function myFunction() {
-    alert('Hello looser');
-    
+    if (!confirm("15 minutes up. Continue?")) {
+            stopIt();
+    }
 }
 </script>
 
