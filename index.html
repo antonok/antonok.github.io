@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="startIt();">Start It</button>
+<button onclick="stopIt();">Stop It</button>
+
+<script>
+
+var timer;
+
+function startIt() {
+	timer = setInterval(myFunction, 3000);
+}
+
+function stopIt() {
+	clearTimeout(timer);
+}
+
+function myFunction() {
+    alert('Hello looser');
+    
+}
+</script>
+
+</body>
+</html>
